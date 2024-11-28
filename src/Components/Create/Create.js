@@ -80,8 +80,11 @@ const Create = () => {
             <br />
           
           <br />
-          <img alt="Posts" width="200px" height="200px" src={image ? URL.createObjectURL(image):null}></img>
-       
+          {(
+
+         image&& 
+          <img alt="Posts" width="200px" height="200px" src={ URL.createObjectURL(image)}></img>
+        )}
             <br />
             <input onChange={(e)=>setimage(e.target.files[0])} type="file" />
             <br />
